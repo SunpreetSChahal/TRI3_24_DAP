@@ -34,7 +34,7 @@ for file_name, file in zip(loaded_files_names_rcsv, loaded_files):
     table_name = file_name
     file.to_sql(table_name, 
                 conn, 
-                if_exists= 'replace') ## Maybe check content before replacing a file
+                if_exists= 'append') ## Maybe check content before replacing a file
 
 # %%
 conn.close()
